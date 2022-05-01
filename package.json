@@ -1,0 +1,593 @@
+{
+  "name": "itouch",
+	"displayName": "iTouch",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.66.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+        "macBook pro",
+        "touchBar",
+        "extra buttons",
+        "shortcuts",
+        "vscode",
+        "visual studio code",
+        "macBook",
+        "developers",
+        "touch bar"
+    ],
+	"activationEvents": [
+        "onCommand:arorashivoy.touchBar.runCode",
+        "onCommand:arorashivoy.touchBar.goToDefinition",
+        "onCommand:arorashivoy.touchBar.addCursorAbove",
+        "onCommand:arorashivoy.touchBar.addCursorBelow",
+        "onCommand:arorashivoy.touchBar.enableFuncGroup",
+        "onCommand:arorashivoy.touchBar.enableSrcGroup",
+        "onCommand:arorashivoy.touchBar.enableEditorGroup",
+        "onCommand:arorashivoy.touchBar.enableCursorsGroup"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "arorashivoy.touchBar.runCode",
+				"group": "arorashivoy",
+				"title": "\u25b6"
+			},
+            {
+                "command": "arorashivoy.touchBar.goToDefinition",
+                "group": "arorashivoy",
+                "when": "editorHasSelection",
+                "title": "→ƒ"
+            },
+            {
+                "command": "arorashivoy.touchBar.addCursorAbove",
+                "group": "arorashivoy",
+                "title": "↑𝙸"
+            },
+            {
+                "command": "arorashivoy.touchBar.addCursorBelow",
+                "group": "arorashivoy",
+                "title": "↓𝙸"
+            },
+            {
+                "command": "workbench.action.toggleSidebarVisibility",
+                "group": "arorashivoy",
+                "title": "◧"
+            },
+            {
+                "command": "workbench.action.togglePanel",
+                "group": "arorashivoy",
+                "title": "⬓"
+            },
+            {
+                "command": "workbench.action.showCommands",
+                "group": "arorashivoy",
+                "title": ">_"
+            },
+            {
+				"command": "editor.action.formatDocument",
+				"group": "arorashivoy",
+				"title": "⇝ƒ⇜"
+			},
+            {
+                "command": "editor.action.rename",
+                "group": "arorashivoy",
+                "title": "✎_"
+            },
+            {
+                "command": "editor.action.marker.nextInFiles",
+                "group": "arorashivoy",
+                "title": "⇝"
+            },
+            {
+                "command": "editor.action.copyLinesDownAction",
+                "group": "arorashivoy",
+                "title": "☰↓"
+            },
+            {
+                "command": "editor.action.addSelectionToNextFindMatch",
+                "group": "arorashivoy",
+                "title": "🔎+"
+            },
+            {
+                "command": "editor.action.moveSelectionToNextFindMatch",
+                "group": "arorashivoy",
+                "title": "🔎"
+            },
+            {
+                "command": "editor.action.toggleRenderWhitespace",
+                "group": "arorashivoy",
+                "title": "a..b"
+            },
+            {
+                "command": "editor.action.previewDeclaration",
+                "group": "arorashivoy",
+                "title": "ƒ ["
+            },
+            {
+                "command": "editor.action.referenceSearch.trigger",
+                "group": "arorashivoy",
+                "title": "ƒ⥺"
+            },
+            {
+                "command": "workbench.action.openGlobalSettings",
+                "group": "arorashivoy",
+                "title": "⚙"
+            },
+            {
+                "command": "editor.action.indentLines",
+                "group": "arorashivoy",
+                "title": "→☰"
+            },
+            {
+                "command": "editor.action.outdentLines",
+                "group": "arorashivoy",
+                "title": "←☰"
+            },
+            {
+                "command": "editor.action.jumpToBracket",
+                "group": "arorashivoy",
+                "title": "→}"
+            },
+            {
+                "command": "editor.action.blockComment",
+                "group": "arorashivoy",
+                "title": "/* */"
+            },
+            {
+                "command": "editor.action.commentLine",
+                "group": "arorashivoy",
+                "title": "//"
+            },
+            {
+                "command": "arorashivoy.touchBar.enableFuncGroup",
+                "group": "arorashivoy",
+                "title": "{ ƒ }"
+            },
+            {
+                "command": "arorashivoy.touchBar.enableSrcGroup",
+                "group": "arorashivoy",
+                "title": "{ ☰ }"
+            },
+            {
+                "command": "arorashivoy.touchBar.enableCursorsGroup",
+                "group": "arorashivoy",
+                "title": "{ 𝙸 }"
+            },
+            {
+                "command": "arorashivoy.touchBar.enableEditorGroup",
+                "group": "arorashivoy",
+                "title": "{ ✎_ }"
+            },
+            {
+                "command": "arorashivoy.touchBar.closeGroup",
+                "group": "arorashivoy",
+                "title": " 🅧 "
+            },
+            {
+                "command": "git.sync",
+                "group": "arorashivoy",
+                "title": "↻"
+            },
+            {
+                "command": "extension.dash.emptySyntax",
+                "group": "arorashivoy",
+                "title": "🧠"
+            },
+            {
+                "command": "extension.dash.specific",
+                "group": "arorashivoy",
+                "title": "🧠🔎"
+            }
+        ],
+        "menus": {
+            "touchBar": [
+				{
+					"command": "arorashivoy.touchBar.runCode",
+					"group": "arorashivoy",
+					"when": "config.arorashivoy-touchbar.runCode && !enabledGroup"
+				},
+                {
+                    "command": "arorashivoy.touchBar.enableFuncGroup",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.enableFuncGroup && !enabledGroup"
+                },
+                {
+                    "command": "arorashivoy.touchBar.enableSrcGroup",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.enableSrcGroup && !enabledGroup"
+                },
+                {
+                    "command": "arorashivoy.touchBar.enableCursorsGroup",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.enableCursorsGroup && !enabledGroup"
+                },
+                {
+                    "command": "arorashivoy.touchBar.enableEditorGroup",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.enableEditorGroup && !enabledGroup"
+                },
+                {
+                    "command": "arorashivoy.touchBar.closeGroup",
+                    "group": "arorashivoy",
+                    "when": "enabledGroup"
+                },
+                {
+                    "command": "arorashivoy.touchBar.goToDefinition",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.goToDefinition && !enabledGroup"
+                },
+                {
+					"command": "editor.action.formatDocument",
+					"group": "arorashivoy",
+					"when": "config.arorashivoy-touchbar.formatDocument && !enabledGroup"
+				},
+                {
+                    "command": "editor.action.rename",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.rename && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.rename",
+                    "group": "arorashivoy",
+                    "when": "enabledFuncGroup"
+                },
+                {
+                    "command": "editor.action.marker.nextInFiles",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.nextInFiles"
+                },
+                {
+                    "command": "editor.action.previewDeclaration",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.peekDefinition && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.previewDeclaration",
+                    "group": "arorashivoy",
+                    "when": "enabledFuncGroup"
+                },
+                {
+                    "command": "editor.action.referenceSearch.trigger",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.showReferences && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.referenceSearch.trigger",
+                    "group": "arorashivoy",
+                    "when": "enabledFuncGroup"
+                },
+                {
+                    "command": "editor.action.jumpToBracket",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.jumpToBracket && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.jumpToBracket",
+                    "group": "arorashivoy",
+                    "when": "enabledFuncGroup"
+                },
+                {
+                    "command": "arorashivoy.touchBar.addCursorAbove",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.addCursorAbove"
+                },
+                {
+                    "command": "arorashivoy.touchBar.addCursorAbove",
+                    "group": "arorashivoy",
+                    "when": "enabledCursorsGroup"
+                },
+                {
+                    "command": "arorashivoy.touchBar.addCursorBelow",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.addCursorBelow && !enabledGroup"
+                },
+                {
+                    "command": "arorashivoy.touchBar.addCursorBelow",
+                    "group": "arorashivoy",
+                    "when": "enabledCursorsGroup"
+                },
+                {
+                    "command": "editor.action.addSelectionToNextFindMatch",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.selectNext && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.addSelectionToNextFindMatch",
+                    "group": "arorashivoy",
+                    "when": "enabledCursorsGroup"
+                },
+                {
+                    "command": "editor.action.moveSelectionToNextFindMatch",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.goToNext && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.moveSelectionToNextFindMatch",
+                    "group": "arorashivoy",
+                    "when": "enabledCursorsGroup"
+                },
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.toggleSidebar && !enabledGroup"
+                },
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "group": "arorashivoy",
+                    "when": "enabledEditorGroup"
+                },
+                {
+                    "command": "workbench.action.togglePanel",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.togglePanel && !enabledGroup"
+                },
+                {
+                    "command": "workbench.action.togglePanel",
+                    "group": "arorashivoy",
+                    "when": "enabledEditorGroup"
+                },
+                {
+                    "command": "workbench.action.showCommands",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.showCommands && !enabledGroup"
+                },
+                {
+                    "command": "workbench.action.showCommands",
+                    "group": "arorashivoy",
+                    "when": "enabledEditorGroup"
+                },
+                {
+                    "command": "editor.action.toggleRenderWhitespace",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.toggleWhiteSpace && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.toggleRenderWhitespace",
+                    "group": "arorashivoy",
+                    "when": "enabledEditorGroup"
+                },
+                {
+                    "command": "workbench.action.openGlobalSettings",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.settings && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.copyLinesDownAction",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.copyLineDown && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.copyLinesDownAction",
+                    "group": "arorashivoy",
+                    "when": "enabledSrcGroup"
+                },
+                {
+                    "command": "editor.action.indentLines",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.indent && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.indentLines",
+                    "group": "arorashivoy",
+                    "when": "enabledSrcGroup"
+                },
+                {
+                    "command": "editor.action.outdentLines",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.outdent && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.outdentLines",
+                    "group": "arorashivoy",
+                    "when": "enabledSrcGroup"
+                },
+                {
+                    "command": "editor.action.blockComment",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.blockComment && !enabledGroup"
+                },
+                {
+                    "command": "editor.action.blockComment",
+                    "group": "arorashivoy",
+                    "when": "enabledSrcGroup"
+                },
+                {
+                    "command": "editor.action.commentLine",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.commentLine && !enabledGroup"
+                },
+                {
+                    "command": "git.sync",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.gitSync && !enabledGroup"
+                },
+                {
+                    "command": "extension.dash.emptySyntax",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.docs && !editorHasSelection && !enabledGroup || config.arorashivoy-touchbar.docs && !config.arorashivoy-touchbar.docsSelection && !enabledGroup"
+                },
+                {
+                    "command": "extension.dash.specific",
+                    "group": "arorashivoy",
+                    "when": "config.arorashivoy-touchbar.docsSelection && editorHasSelection && !enabledGroup || config.arorashivoy-touchbar.docsSelection && !config.arorashivoy-touchbar.docs && !enabledGroup"
+                }
+            ]
+        },
+		"configuration": [
+            {
+                "title": "Shivoy's Touch Bar Settings",
+                "type": "object",
+                "properties": {
+					"arorashivoy-touchbar.runCode": {
+						"type": "boolean",
+						"default": true,
+						"description": "Enable the Run Code button"
+					},
+                    "arorashivoy-touchbar.goToDefinition": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Go to Definition"
+                    },
+                    "arorashivoy-touchbar.addCursorBelow": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Add cursor below"
+                    },
+                    "arorashivoy-touchbar.formatDocument": {
+						"type": "boolean",
+						"default": true,
+						"description": "Format the document"
+					},
+                    "arorashivoy-touchbar.rename": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Rename Symbol. It will replace the variable or function name (for example) everywhere"
+                    },
+                    "arorashivoy-touchbar.nextInFiles": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Jump to next error in project"
+                    },
+                    "arorashivoy-touchbar.togglePanel": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Toggle Panel"
+                    },
+                    "arorashivoy-touchbar.showCommands": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Show Commands"
+                    },
+                    "arorashivoy-touchbar.selectNext": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Select the next matching string (if a word is selected, uses this to search)"
+                    },
+                    "arorashivoy-touchbar.enableFuncGroup": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Enables the Function group"
+                    },
+                    "arorashivoy-touchbar.enableSrcGroup": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Enables the Source group"
+                    },
+                    "arorashivoy-touchbar.enableCursorsGroup": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Enables the Cursors group"
+                    },
+                    "arorashivoy-touchbar.enableEditorGroup": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Enables the Editor group"
+                    },
+                    "arorashivoy-touchbar.toggleSidebar": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Toggle Sidebar"
+                    },
+                    "arorashivoy-touchbar.addCursorAbove": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Add cursor above"
+                    },
+                    "arorashivoy-touchbar.copyLineDown": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Copy the current line below"
+                    },
+                    "arorashivoy-touchbar.goToNext": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Go to the next match (if a word is selected, uses this to search)"
+                    },
+                    "arorashivoy-touchbar.toggleWhiteSpace": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Show or hide white spaces"
+                    },
+                    "arorashivoy-touchbar.peekDefinition": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Peek definition/declaration"
+                    },
+                    "arorashivoy-touchbar.showReferences": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "List references who use the current symbol"
+                    },
+                    "arorashivoy-touchbar.settings": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Open user settings"
+                    },
+                    "arorashivoy-touchbar.indent": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Indent text"
+                    },
+                    "arorashivoy-touchbar.outdent": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Outdent text"
+                    },
+                    "arorashivoy-touchbar.jumpToBracket": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Jump to matching bracket"
+                    },
+                    "arorashivoy-touchbar.blockComment": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Toggles block comments ( /* ... */ ) for the current selection"
+                    },
+                    "arorashivoy-touchbar.commentLine": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Toggles line comments ( // ) for the current selection"
+                    },
+                    "arorashivoy-touchbar.gitSync": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Git Sync"
+                    },
+                    "arorashivoy-touchbar.docs": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Documentation"
+                    },
+                    "arorashivoy-touchbar.docsSelection": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Opens documentation for current selection"
+                    }
+                }
+            }
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+        "@types/vscode": "^1.66.0",
+        "@types/glob": "^7.2.0",
+        "@types/mocha": "^9.1.1",
+        "@types/node": "14.x",
+        "eslint": "^8.14.0",
+        "glob": "^8.0.1",
+        "mocha": "^9.2.2",
+        "typescript": "^4.6.4",
+        "@vscode/test-electron": "^2.1.3"
+    }
+
+}
