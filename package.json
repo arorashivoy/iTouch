@@ -1,11 +1,12 @@
 {
   "name": "itouch",
 	"displayName": "iTouch",
-	"description": "",
-	"version": "0.0.1",
+	"description": "Adding useful touch bar buttons",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
+    "repository": "https://github.com/arorashivoy/iTouch",
 	"categories": [
 		"Other"
 	],
@@ -426,7 +427,7 @@
                 "properties": {
 					"arorashivoy-touchbar.runCode": {
 						"type": "boolean",
-						"default": true,
+						"default": false,
 						"description": "Enable the Run Code button"
 					},
                     "arorashivoy-touchbar.goToDefinition": {
@@ -461,7 +462,7 @@
                     },
                     "arorashivoy-touchbar.showCommands": {
                         "type": "boolean",
-                        "default": false,
+                        "default": true,
                         "description": "Show Commands"
                     },
                     "arorashivoy-touchbar.selectNext": {
