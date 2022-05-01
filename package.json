@@ -422,7 +422,7 @@
         },
 		"configuration": [
             {
-                "title": "Shivoy's Touch Bar Settings",
+                "title": "iTouch",
                 "type": "object",
                 "properties": {
 					"arorashivoy-touchbar.runCode": {
