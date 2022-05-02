@@ -2,6 +2,7 @@
   "name": "itouch",
 	"displayName": "iTouch",
 	"description": "Adding useful touch bar buttons",
+    "publisher": "arorashivoy",
 	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.66.0"
@@ -579,6 +580,8 @@
 		"pretest": "npm run lint",
 		"test": "node ./test/runTest.js"
 	},
+    "license": "Apache-2.0",
+    "icon": "",
 	"devDependencies": {
         "@types/vscode": "^1.66.0",
         "@types/glob": "^7.2.0",
