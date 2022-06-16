@@ -3,7 +3,7 @@
 	"displayName": "iTouch",
 	"description": "Adding useful touch bar buttons",
     "publisher": "arorashivoy",
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
