@@ -1,6 +1,6 @@
 # iTouch README
 
-This extension is a modification of [nasc-vscode-mac-touchbar](https://github.com/on2-dev/nasc-vscode-mac-touchbar) extension since it is no longer getting updated and I wanted to add a feature to run CodeRunner code from the TouchBar
+This extension is a modification of [nasc-vscode-mac-touchbar](https://github.com/on2-dev/nasc-vscode-mac-touchbar) extension since it is no longer getting updated and I wanted to add a few more features of my own.
 
 ## Features
 
