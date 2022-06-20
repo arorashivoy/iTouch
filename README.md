@@ -66,3 +66,6 @@ Please have in mind the limit of 5 active buttons (if you have the OS control st
 ## NOTES:
 
 Important, if the buttons don't fit in the bar, they will not be shown (this is a current bug in VSCode support for the TouchBar and soon to be fixed). 
+
+# Credits
+[Lakshya Bhushan](https://github.com/lakshaybhushan) - Logo of the extension
