@@ -1,4 +1,14 @@
-# iTouch README
+# iTouch
+
+**[Install from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=arorashivoy.itouch)** — `arorashivoy.itouch`, or run:
+
+```sh
+code --install-extension arorashivoy.itouch
+```
+
+> A screenshot or GIF of the Touch Bar with these buttons rendered belongs here.
+> It is a Touch Bar extension; a reader cannot picture it from a feature list.
+
 
 This extension is a modification of [nasc-vscode-mac-touchbar](https://github.com/on2-dev/nasc-vscode-mac-touchbar) extension since it is no longer getting updated and I wanted to add a few more features of my own.
 
